@@ -1,0 +1,172 @@
+﻿/*Redefine commands*/
+table, th, td {
+    border: 1px solid black;
+    text-align:center;
+}
+
+tr:nth-child(even) {
+    background-color: #808080;
+}
+
+a:hover, a:link {
+	color:red; 
+} 
+
+a:visited {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}
+
+/*Define classes*/
+.tablestyle {	
+	width: 185px; 
+	height: 280px
+}
+
+.embedstyle1 {	
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0
+}
+
+.center {
+    margin: auto;
+    width: 90%;
+    border: 3px solid grey;
+    padding: 10px;
+}
+
+.auto-style1 {
+	font-size: xx-large;
+	font-family: "AR BERKLEY";
+	color: #FF0000;
+}
+
+.auto-style2 {
+	border: 2px solid #000000;
+}
+
+.auto-style3 {
+	font-size: large;
+	font-family: "AR BERKLEY";
+	color: #0000FF;
+}
+
+.auto-style4 {
+	text-align: center;
+}
+
+.auto-style5 {
+	font-size: xx-large;
+}
+
+.auto-style7 {
+	font-size: x-large;
+	font-family: "AR BERKLEY";
+	text-decoration: underline;
+}
+
+.auto-style8 {
+	text-decoration: underline;
+}
+
+.auto-style9 {
+	font-size: x-large;
+}
+
+.auto-style10 {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.auto-style11 {
+	text-decoration: underline;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: xx-large;
+}
+
+.auto-style12 {
+	font-size: large;
+}
+
+.auto-style13 {
+	font-size: x-large;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.auto-style14 {
+	font-family: "AR BERKLEY";
+	font-size: x-large;
+}
+
+.auto-style15 {
+	font-family: "AR BERKLEY";
+	font-size: x-large;
+	color: #000080;
+}
+
+.auto-style16 {
+	font-family: "AR BERKLEY";
+	font-size: large;
+}
+.auto-style17 {
+	font-family: "AR BERKLEY";
+	font-size: xx-large;
+}
+.auto-style18 {
+	font-family: "AR BERKLEY";
+	font-size: large;
+	color: #000080;
+}
+
+
+/*Define ids*/
+#textshadow {
+    color: white;
+    text-shadow: 2px 2px 2px black, 0 0 20px red, 0 0 5px darkblue;
+}
+
+#bordercircle {
+    border-color: orange;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 80%;
+}
+
+#bordercircle:hover {
+    box-shadow: 0 0 4px 3px rgba(120, 240, 140, 0.9);
+}
+
+#boxshadow {
+    position: relative;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .9);
+    padding: 10px;
+    background: white;
+}
+
+#boxshadow img {
+    border-style: inset;
+    width: 100%;
+    border: 1px solid #9b4511;
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9);                
+    width: 80%; 
+    left: 10%; 
+    bottom: 0;
+}  
+
+#table1 {
+    width: 90%;
+    border-radius: 25px;
+    background: orange;
+    padding: 20px; 
+    height: 150px;    
+}

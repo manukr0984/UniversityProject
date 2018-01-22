@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<script type="text/javascript">
+
+function WelcomeMessage()
+{
+  your_name = prompt("Please provide your first name","");
+  document.writeln("<h1 style=\"color: blue; font-size: 24pt; font-family: AR BERKLEY\"><b>Welcome " + your_name + " !</b></h1><p>");
+}
+
+function calculateBMI()
+{
+  var theNode = getObj("bmi");
+  var bmrString="Your Body Mass Index (BMI) is: "+ Calculate() + " ";
+  theNode.firstChild.nodeValue=bmrString;
+}
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+
+function Calculate() {
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+	
+	/*BMI (kg/m2) = mass (kg) / height (m)2*/
+    var val1 = parseFloat(weight);
+    var val2 = parseFloat(height)/100;
+    var val3 = val2 * val2;
+    var result = val1 / val3;
+    var element = document.getElementById("answer");
+        
+    if (weight == "" || height == "")
+    {
+        window.alert("Please Fill All Required Fields");
+
+    } 
+    if (isNaN(weight) || isNaN(height)) 
+  	{
+    alert("Must input numbers");
+  	}
+    
+     if (result <18.5)
+    {
+      document.bmi1.src="underweight.jpg";
+      element.innerHTML = "Underweight!!Need to focus on strength training.";
+    }
+    
+    else if (result >=18.5 && result<=25)
+    {
+      document.bmi1.src="normal.jpg";
+      element.innerHTML = "Normal Weight!!Need to have normal fitness training.";
+    }
+     else if (result >25 && result<=30)
+    {
+      document.bmi1.src="overweight.jpg";
+      element.innerHTML = "Overweight!!Need to focus on cardiovascular exercises";
+    }
+	else if (result >30)
+    {
+      document.bmi1.src="obese.jpg";
+      element.innerHTML = "Obese!!Need to focus on diet considerations";
+    }
+
+          
+	return result.toFixed(2);
+}
+</script>
+
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-8">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+<br />
+<br />
+<br />
+<script type="text/javascript">
+  WelcomeMessage();
+</script>
+<br />
+<div class="row">
+<div class="col-md-7">
+
+<span class="auto-style7"><strong>Address:
+<br />
+	</strong></span><span class="auto-style3">432 Western Ave, Albany, 
+NY 12203
+<br />
+	Mob: (508)-361-8906
+<br />
+	Email: manukr007@gmail.com </span>
+<br />
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.8705095633045!2d-73.78785398453407!3d42.66409937916764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0a517693ea11%3A0x3d19f1e11deefd6!2sThe+College+of+Saint+Rose!5e0!3m2!1sen!2sin!4v1496058111435" 
+width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="col-md-5">
+<span class="auto-style3"><strong>Body mass index(BMI) Calculator</strong><br /></span>
+The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual. 
+The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units 
+of kg/m2. BMI is used to determine the weight group.<br /><br />
+
+<span class="auto-style3"><strong>Please provide the details requested below to calculate your BMI</strong><br /></span>
+<form name="form1" action="#">
+  <fieldset>
+    <strong>Weight (in kgs): </strong> <br /><input type="text" id="weight" /><br />
+    <strong>Height (in cms): </strong> <br /><input type="text" id="height" /><br />
+  </fieldset>
+    <input type="button" onclick="calculateBMI()" value="Calculate BMI" /><br /><br />
+	<p><span id="bmi" class="auto-style14">Know your BMI !!</span></p>
+</form><br />
+<span class="auto-style3" id="answer">Know your weight group</span><br />
+<img src="bmi_question.jpg" name="bmi1" alt="bmi question" style="width:200px;height:200px;"/> 
+<br /><br />
+
+</div>
+</div>
+</div>
+</body>
+</html>

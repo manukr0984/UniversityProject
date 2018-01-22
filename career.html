@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+<style type="text/css">
+#inspire { position:absolute; left:0px; top:150px }
+#rocky { position:absolute; left:0px; top:150px }
+</style>
+
+<script type="text/javascript">
+var delay = 10;
+var pos= 0;
+var pos1=0
+
+function startAnim()
+{
+	setInterval("animate()",delay);
+}
+
+function animate()
+{
+	if (pos1 == 0)
+    {
+      pos1=350;
+   	}
+    else
+    {
+      pos1--; 
+      getObj('rocky').style.top = pos1 + 'px'; 
+
+   	}
+
+    if (pos == 350)
+    {
+      pos=0;
+   	}
+    else
+    {
+      pos++; 
+      getObj('inspire').style.top = pos + 'px'; 
+      getObj('inspire').style.left = pos + 'px'; 
+   	}
+}
+
+function getObj(elementID)
+{
+	return document.getElementById(elementID);
+}
+
+</script>
+
+</head>
+
+<body onload="startAnim();">
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+<br />
+<div class="row">
+<div class="col-md-4">
+<form action="mailto:manukr007@gmail.com?subject=Career" method="post" enctype="text/plain"><br />
+	<span class="auto-style7"><strong>Please provide the details and we would get back to you within 7 days.
+	</strong></span>
+<br />
+	<strong>First name:  </strong>  <br />
+<input type="text" name="first_name" />
+<br />
+	<strong>Last name: </strong> <br />
+ <input type="text" name="last_name" />
+<br />
+	<strong>Gender</strong><br />
+<input type="radio" name="gender" value="male" checked="checked" /> Male<br />
+<input type="radio" name="gender" value="female" /> Female<br />
+<br />
+	<strong>Address:  </strong>  <br />
+<input type="text" name="address" />
+<br />
+<strong>Expertise:  </strong>  <br />
+<input type="checkbox" name="expertise" value="fitness" checked="checked" />Physical Fitness<br />
+<input type="checkbox" name="expertise" value="kickboxing" />Kick Boxing<br />
+<input type="checkbox" name="expertise" value="boxing" />Boxing<br />
+<input type="checkbox" name="expertise" value="yoga" />Yoga<br />
+<input type="checkbox" name="expertise" value="kravmaga" />Krav Maga<br />
+<input type="checkbox" name="expertise" value="turbokick" />Turbo Kick<br />
+
+	<strong>Email:  </strong>  <br />
+<input type="text" name="email" />
+<br />
+	<strong>Mobile:  </strong>  <br />
+<input type="text" name="mobile" />
+<br />
+<br />
+<input type="submit" value="Submit" />
+<input type="reset" value="Reset" />
+</form>
+</div>
+<div class="col-md-8">
+<br />
+<br />
+<img src="rocky.gif" id="rocky" width="300" height="300" alt="" />
+<br />
+<img src="inspiration.gif" id="inspire" width="300" height="300" alt="" />
+<br />
+<div style="text-align: right">
+<img id="bordercircle" src="career.jpg" alt="career" width="400px"></img>
+</div>
+<br />
+<div style="text-align: right">
+<img src="career2.jpg" alt="career2" width="400px"></img>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>

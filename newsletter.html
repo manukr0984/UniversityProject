@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<script type="text/javascript">
+function courseCostTotal() {
+  var input = document.getElementsByName("product");
+  var totalCost  = 0;
+  for (var count = 0; count < input.length; count++) {
+    if (input[count].checked) {
+      totalCost += parseFloat(input[count].value);
+    }
+  }
+  if (totalCost <0)
+  {
+  totalCost=totalCost+2;
+  }
+  document.getElementById("total").value = "$" + totalCost.toFixed(2);
+}
+function fee(f1)
+{
+	window2=open("about:blank","window2");
+	window2.document.open();
+	window2.document.write("<HTML>");
+	window2.document.write("<HEAD>");
+	window2.document.write("<TITLE> CSC515 Gym </TITLE>");
+	window2.document.write("</HEAD>");
+	window2.document.write("The Newsletter/Magzine/DVD Monthly Subscription would be " + f1.total.value.big() + "<p>");
+	window2.document.write("<FORM>");
+	window2.document.write("<INPUT TYPE='button' VALUE='Close' onClick=self.close();>");
+	window2.document.write("<P>");
+	window2.document.write("</BODY>");
+	window2.document.write("</HTML>");
+	window2.document.close();
+}
+</script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+	<br />
+	<div class="row">
+	<div class="col-md-6">
+		<div id="boxshadow">
+		<img src="newsletter.jpg" alt="newsletter" width="400px"></img></div></div>
+	<div class="col-md-6">
+	<form action="mailto:manukr007@gmail.com?subject=Newsletter" method="post" enctype="text/plain"><br />
+
+		<span class="auto-style7"><strong>Sign up for the CSC515 Gym monthly newsletter and receive the latest tips on nutrition, health and fitness.
+		</strong></span>
+	<br />
+	First name:  <br />
+	<input type="text" name="first_name" />
+	<br />
+	Last name: <br />
+ 	<input type="text" name="last_name" />
+	<br />
+	Email:  <br />
+	<input type="text" name="email" />
+	<br />
+	<br />
+	<input type="submit" value="Submit" />
+	<input type="reset" value="Reset" />
+	</form>
+	<br />
+	<form name="theForm">
+        <fieldset>
+            <legend>
+                Newsletter/Magzine/DVD Monthly Subscription
+            </legend>
+            <span class="auto-style14">Select the items for subscription.</span><br />   
+            <label>
+                <input name="product" value="8.50" type="checkbox" id="p1" onclick="courseCostTotal()"/>
+                Newsletter $8.50
+            </label>
+            <label>
+                <input name="product" value="4.99" type="checkbox" id="p2" onclick="courseCostTotal()"/>
+                Fitness Magzine $4.99
+            </label>
+            <label>
+                <input name="product" value="3.99" type="checkbox" id="p3" onclick="courseCostTotal()"/>
+                Workout Plans DVD $3.99
+            </label>
+            <br />
+            <span class="auto-style14">Exciting Offer for our members.<br />
+           $2 discount for Gym Members.<br />
+           Are you a Member?</span><br />
+            <label>
+                <input name="product" value="-2" type="radio" id="r1" onclick="courseCostTotal()"/>
+                Yes
+            </label>
+            <label>
+                <input name="product" value="0" type="radio" id="r2" onclick="courseCostTotal()"/>
+                No
+            </label>
+			<br />
+			<label>
+                Monthly Cost 
+                <input name="total" value="" type="text" id="total"/>
+            </label>
+        </fieldset>
+        <input type="button" value="Display Subscription Fee" onclick="fee(document.theForm);" />
+        <input value="Reset" type="reset" />
+</form>
+
+	</div>
+	</div>
+</div>
+</body>
+
+</html>

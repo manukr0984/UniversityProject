@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TRAINERS>
+
+     <TRAINER>
+
+          <TrainerId>A111111</TrainerId>
+
+          <TrainerName>Zoey</TrainerName>
+
+          <TrainerAge>28</TrainerAge>
+
+          <TrainerAddress>14 Western Ave</TrainerAddress>
+
+          <TrainerPhone>(508)361-8901</TrainerPhone>
+
+          <TrainerEmail>Zoey@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Turbo Kick</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>B222222</TrainerId>
+
+          <TrainerName>Kurt</TrainerName>
+
+          <TrainerAge>32</TrainerAge>
+
+          <TrainerAddress>234 Washington Ave</TrainerAddress>
+
+          <TrainerPhone>(508)389-9001</TrainerPhone>
+
+          <TrainerEmail>Kurt@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Kickboxing</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>C333333</TrainerId>
+
+          <TrainerName>Ravi</TrainerName>
+
+          <TrainerAge>39</TrainerAge>
+
+          <TrainerAddress>23 Quail Street</TrainerAddress>
+
+          <TrainerPhone>(508)411-5203</TrainerPhone>
+
+          <TrainerEmail>Ravi@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Yoga</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>D444444</TrainerId>
+
+          <TrainerName>Katrina</TrainerName>
+
+          <TrainerAge>32</TrainerAge>
+
+          <TrainerAddress>89 Western Ave</TrainerAddress>
+
+          <TrainerPhone>(508)318-2343</TrainerPhone>
+
+          <TrainerEmail>Katrina@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Krav Maga</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>E555555</TrainerId>
+
+          <TrainerName>John</TrainerName>
+
+          <TrainerAge>30</TrainerAge>
+
+          <TrainerAddress>65 Winthrop Ave</TrainerAddress>
+
+          <TrainerPhone>(508)231-4363</TrainerPhone>
+
+          <TrainerEmail>John@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Boxing</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>F666666</TrainerId>
+
+          <TrainerName>Howard</TrainerName>
+
+          <TrainerAge>25</TrainerAge>
+
+          <TrainerAddress>791 Homestead Ave</TrainerAddress>
+
+          <TrainerPhone>(508)785-1638</TrainerPhone>
+
+          <TrainerEmail>Howard@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Yoga</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>G777777</TrainerId>
+
+          <TrainerName>Washington</TrainerName>
+
+          <TrainerAge>37</TrainerAge>
+
+          <TrainerAddress>321 Western Ave</TrainerAddress>
+
+          <TrainerPhone>(508)787-2636</TrainerPhone>
+
+          <TrainerEmail>Washington@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Boxing</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>H888888</TrainerId>
+
+          <TrainerName>Kain</TrainerName>
+
+          <TrainerAge>45</TrainerAge>
+
+          <TrainerAddress>412 Madison Ave</TrainerAddress>
+
+          <TrainerPhone>(508)361-9353</TrainerPhone>
+
+          <TrainerEmail>Kain@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Krav Maga</TrainerSpecilization>
+
+     </TRAINER>
+
+     <TRAINER>
+
+          <TrainerId>I999999</TrainerId>
+
+          <TrainerName>Tom</TrainerName>
+
+          <TrainerAge>23</TrainerAge>
+
+          <TrainerAddress>160 Madison Ave</TrainerAddress>
+
+          <TrainerPhone>(508)233-5335</TrainerPhone>
+
+          <TrainerEmail>Tom@csc515.com</TrainerEmail>
+
+          <TrainerSpecilization>Kickboxing</TrainerSpecilization>
+
+     </TRAINER>
+
+</TRAINERS>

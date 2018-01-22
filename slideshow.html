@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Slideshow</title>
+<style type="text/css">
+html, body {
+    height: 100%;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+</style>
+<script type="text/javascript"> 
+var count = 0; var imageList = new Array(); 
+imageList[0] = "image1.jpg"; 
+imageList[1] = "image2.jpg"; 
+imageList[2] = "image3.jpg"; 
+imageList[3] = "image4.jpg"; 
+
+function slideShowImage() 
+{ 
+document.slide.src = imageList[count]; 
+if(count < imageList.length - 1) count++; 
+else count = 0; 
+setTimeout("slideShowImage()",2000); 
+} 
+window.onload=slideShowImage; 
+</script> 
+</head>
+
+<body>
+<img name="slide" src="image1.jpg" alt="" />
+</body>
+</html>

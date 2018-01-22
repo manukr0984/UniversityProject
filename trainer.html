@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+<style type="text/css">
+.auto-style19 {
+	position: relative;
+	min-height: 1px;
+	float: left;
+	width: 66.66666667%;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+</style>
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+
+     xmlhttp=new XMLHttpRequest();
+
+}
+
+else
+
+{// code for IE6, IE5
+
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+}
+
+xmlhttp.open("GET","trainer_details.xml",false);
+
+xmlhttp.send();
+
+xmlDoc=xmlhttp.responseXML;
+
+ 
+
+function showData()
+
+{
+
+  document.getElementById('display').innerHTML = "";
+
+  var match = linearSearch();
+
+ 
+
+  if (matches.length == 0)
+
+  {
+
+    alert("Sorry, no match");
+
+    return;
+
+  }
+
+  makeData(matches);
+
+}
+
+ 
+
+function linearSearch()
+
+{
+
+  var searchName = document.getElementById('trainer').value;
+
+  matches = new Array();
+
+  count = 0;
+
+  trainers = xmlDoc.getElementsByTagName("TRAINER");
+
+  for (i = 0; i < trainers.length; i++)
+
+  {
+
+     var trainer = trainers[i];
+
+     thisTrainer = trainer.getElementsByTagName("TrainerName")[0].childNodes[0].nodeValue;
+
+     if (thisTrainer == searchName)
+
+     {
+
+          matches[count] = i;
+
+          count++;
+
+     }
+
+  }
+
+  return matches;
+
+}
+
+ 
+
+function makeData(match)
+
+{        
+
+         table = "";
+
+         table += "<TABLE BORDER=2>";
+
+         table += "<TR>";
+
+ 
+
+         // print heading
+
+         mytrainer = xmlDoc.getElementsByTagName("TRAINER")[0];
+
+         for (j = 0; j < mytrainer.childNodes.length; j++)
+
+         {
+
+          if (mytrainer.childNodes[j].nodeType == 1) // if node is an element
+
+          {
+
+               // display the name of the node in a heading
+
+              table += "<TH>" + mytrainer.childNodes[j].nodeName + "</TH>";
+
+           }
+
+         }
+
+         table += "</TR>";
+
+ 
+
+         // add the data
+
+         // for each child of that trainer
+
+         for (i = 0; i < matches.length; i++)
+
+         {
+
+         // get the ith match
+
+          table += "<TR>";
+
+         mytrainer = xmlDoc.getElementsByTagName("TRAINER")[matches[i]];
+
+         for (j = 0; j < mytrainer.childNodes.length; j++)
+
+         {
+
+               // get a child of that node
+
+               thatProperty = mytrainer.childNodes[j];
+
+               if (thatProperty.nodeType == 1)       
+
+              {
+
+                   // get the value of the first child of that node (the text)
+
+                   table += "<TD>" + thatProperty.childNodes[0].nodeValue + "</TD>";
+
+              }
+
+         }
+
+          table += "</TR>";
+
+         }
+
+         table += "</TABLE>";
+
+         document.getElementById("display").innerHTML = table;
+
+ 
+
+}
+</script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+<br />
+<br />
+	<div class="row">
+	    <div class="col-md-4">
+	<span class="auto-style11"><strong>Our Personal Trainers
+</strong></span>
+<br /><a href="#zoey"><span class="auto-style12"><strong>Zoey</strong></span></a>
+<br /><a href="#kurt"><span class="auto-style12"><strong>Kurt</strong></span></a>
+<br /><a href="#ravi"><span class="auto-style12"><strong>Ravi</strong></span></a>
+<br /><a href="#katrina"><span class="auto-style12"><strong>Katrina</strong></span></a>
+<br />
+<span class="auto-style14"><span class="auto-style8">Trainer Assistants</span><br /></span><span class="auto-style12"> John, Howard, Washington, Kain, Tom
+</span>
+<br />
+</div>
+<div class="auto-style19">
+<br />
+<a href="trainerdetails.html"><span class="auto-style14"><strong>Click here to get detailed information of our trainers</strong></span></a>
+<br />
+	<span class="auto-style14">Enter the trainer name for detailed information: </span> <br /><input type="text" id="trainer" />
+<input type="button" value="Find Information" onclick='showData();' />
+<br />
+<div id="display">
+</div>
+<br />
+</div>
+</div>
+
+<br />
+<p>
+<strong><span class="auto-style13"><span class="auto-style8">
+<a name="zoey">Zoey</a></span><a name="zoey"><br /></a>
+</span></strong>
+<span class="auto-style6">Zoey is an expert in turbokick and kickboxing. <br />She has been traing in turbokick for the past 12 years.</span>
+</p>
+	<span class="auto-style6">Expertise - </span>
+	<a href="http://psy-strike.com/whatisturbo.html" target="_blank">Turbo Kick</a>
+	<br /><br />
+<div style="position:relative;height:0;padding-bottom:56.21%">
+<iframe src="https://www.youtube.com/embed/YAx_t6sPsqQ?ecver=2" class="embedstyle1" 
+width="641" height="360" frameborder="0" allowfullscreen></iframe></div>
+<br />
+<br />
+<br />
+<p>
+<a name="kurt" class="auto-style8"><span class="auto-style7"><strong>Kurt<br />
+</strong></span></a>
+<span class="auto-style6">Kurt is an expert in kickboxing, turbokick and boxing.  <br />He has been training in kickboxing for past 10 years.
+</span>
+</p>
+<span class="auto-style6">Expertise - </span>
+	<a href="https://en.wikipedia.org/wiki/Kickboxing" target="_blank">Kickboxing</a>
+	<br /><br />
+<div style="position:relative;height:0;padding-bottom:56.21%">
+<iframe src="https://www.youtube.com/embed/VeFfQ6t2tNE?ecver=2" 
+class="embedstyle1" width="641" height="360" 
+frameborder="0" allowfullscreen></iframe></div>
+<br />
+<br />
+<br />
+<p>
+<span class="auto-style10">
+<a name="ravi"><strong><span class="auto-style9">Ravi</span></strong><span class="auto-style9"><br />
+</span></a>
+</span>
+<span class="auto-style6">Ravi is an expert in yoga and has been practising it for the last 8 years.
+</span>
+</p>
+<span class="auto-style6">Expertise - </span>
+	<a href="https://en.wikipedia.org/wiki/Yoga" target="_blank">Yoga</a>
+	<br /><br />
+<div style="position:relative;height:0;padding-bottom:56.21%">
+<iframe src="https://www.youtube.com/embed/-2IcOOUqNgI?ecver=2" 
+class="embedstyle1" width="641" height="360" frameborder="0" 
+allowfullscreen></iframe></div>
+<br />
+<br />
+<br />
+<p>
+<a name="katrina" class="auto-style8"><strong><span class="auto-style7">Katrina<br />
+</span></strong></a>
+<span class="auto-style6">
+Katrina is an expert in krav maga and has been traing in it for the last 8 years.
+</span>
+</p>
+<span class="auto-style6">Expertise - </span>
+	<a href="https://en.wikipedia.org/wiki/Krav_Maga" target="_blank">Krav Maga</a>
+	<br /><br />
+<div style="position:relative;height:0;padding-bottom:56.21%">
+<iframe src="https://www.youtube.com/embed/HomFPIjLweQ?ecver=2" 
+class="embedstyle1" width="641" height="360" frameborder="0" 
+allowfullscreen></iframe></div>
+</div>
+</body>
+
+</html>

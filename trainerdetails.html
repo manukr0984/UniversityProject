@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+<script type="text/javascript">
+   
+
+          if (window.XMLHttpRequest)
+
+          {// code for IE7+, Firefox, Chrome, Opera, Safari
+
+              xmlhttp=new XMLHttpRequest();
+
+          }
+
+          else
+
+          {// code for IE6, IE5
+
+              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+          }
+
+          xmlhttp.open("GET","trainer_details.xml",false);
+
+          xmlhttp.send();
+
+          xmlDoc=xmlhttp.responseXML;
+
+         
+
+      function start()
+
+      {
+
+        var table = "";
+
+        childrenNodes = xmlDoc.childNodes[0].childNodes;
+
+        // xmlDoc.childNodes is an array that consists of the root element
+
+        // xmlDoc.childNodes[0].childNodes is an array of the root's children
+
+       
+
+        // test to see if first child is an element (nodeType of 1)
+
+        if (childrenNodes[0].nodeType == 1)
+
+        {
+
+          heading = childrenNodes[0];
+
+        }
+
+        else // second child must be the first element
+
+        {
+
+          heading = childrenNodes[1];
+
+        }
+
+         
+
+         table += "<TABLE BORDER=2 ALIGN=CENTER>";
+
+         table += "<TR>";
+
+      
+
+         // heading is first element child of the root
+
+          for (j = 0; j < heading.childNodes.length; j++)
+
+          {
+
+           if (heading.childNodes[j].nodeType == 1) // if node is an element
+
+           {
+
+               // display the name of the node in a heading
+
+                   table += "<TH>" + heading.childNodes[j].nodeName + "</TH>";
+
+            }
+
+          }
+
+          table += "</TR>";
+
+ 
+
+         // add the data
+
+        for (i = 0; i < childrenNodes.length; i++)
+
+        {
+
+           // get a child of the root
+
+           thisChild = childrenNodes[i];
+
+           if (thisChild.nodeType == 1) // if it's an element
+
+           {
+
+                   table += "<TR>";
+
+                   // for each child of that node
+
+                   for (j = 0; j < thisChild.childNodes.length; j++)
+
+                   {
+
+                        // get a child of that node
+
+                        thatProperty = thisChild.childNodes[j];
+
+                        if (thatProperty.nodeType == 1)       
+
+                        {
+
+                             // get the value of the first child of that node (the text)
+
+                            table += "<TD>" + thatProperty.childNodes[0].nodeValue + "</TD>";
+
+                        }
+
+                   }
+
+                  
+
+ 
+
+            }
+
+                        table += "</TR>";
+
+                     }
+
+         table += "</TABLE>";
+
+         document.getElementById("display").innerHTML = table;
+
+       }
+       
+</script>
+</head>
+
+<body onload="start()">
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+	<div class="text-center">
+<br />
+<br />
+		<span class="auto-style14">Our Personal Trainers Information Table
+		</span>
+<br />
+	</div>
+<div id="display"></div>
+
+</div>
+</body>
+
+</html>

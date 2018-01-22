@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<script type="text/javascript" src="browsercodelibrary.js"></script>
+<script type="text/javascript" src="codelibrary.js"></script>
+<script type="text/javascript">
+<!--
+var itembg = "black";
+var itemcolor = "silver";
+
+var menu1url = new Array();
+menu1url[1] = "http://66.195.8.98/~kumarm153/Homework1/frameset_gym.html";
+menu1url[2] = "http://66.195.8.98/~kumarm153/Homework1/join.html";
+menu1url[3] = "http://66.195.8.98/~kumarm153/Homework1/newsletter.html";
+menu1url[4] = "http://66.195.8.98/~kumarm153/Homework1/class.html";
+menu1url[5] = "http://66.195.8.98/~kumarm153/Homework1/trainer.html";
+menu1url[6] = "http://66.195.8.98/~kumarm153/Homework1/why.html";
+menu1url[7] = "http://66.195.8.98/~kumarm153/Homework1/class.html";
+menu1url[8] = "http://66.195.8.98/~kumarm153/Homework1/index.htm";
+var menu2url = new Array();
+menu2url[1] = "http://66.195.8.98/~kumarm153/Homework2/layout1.css";
+var menu3url = new Array();
+menu3url[1] = "http://66.195.8.98/~kumarm153/Homework3/address.html";
+menu3url[2] = "http://66.195.8.98/~kumarm153/Homework3/why.html";
+menu3url[3] = "http://66.195.8.98/~kumarm153/Homework3/index.htm";
+menu3url[4] = "http://66.195.8.98/~kumarm153/Homework3/address.html";
+menu3url[5] = "http://66.195.8.98/~kumarm153/Homework3/index.htm";
+var menu4url = new Array();
+menu4url[1] = "http://66.195.8.98/~kumarm153/Homework4/index.htm";
+menu4url[2] = "http://66.195.8.98/~kumarm153/Homework4/slideshow.html";
+menu4url[3] = "http://66.195.8.98/~kumarm153/Homework4/newsletter.html";
+menu4url[4] = "http://66.195.8.98/~kumarm153/Homework4/join.html";
+var menu5url = new Array();
+menu5url[1] = "http://66.195.8.98/~kumarm153/Homework5/why.html";
+menu5url[2] = "http://66.195.8.98/~kumarm153/Homework5/career.html";
+menu5url[3] = "http://66.195.8.98/~kumarm153/Homework5/gallery.html";
+menu5url[4] = "http://66.195.8.98/~kumarm153/Homework5/gallery.html";
+menu5url[5] = "http://66.195.8.98/~kumarm153/Homework5/join.html";
+var menu6url = new Array();
+menu6url[1] = "http://66.195.8.98/~kumarm153/Homework6/gallery.html";
+
+
+function dropmenu(menuID) {
+	setVisibility('dropdown'+menuID,"visible");
+	menuFX(getObj('menutitle'+menuID),'over');
+}
+
+function hidemenu(menuID){
+	setVisibility('dropdown'+menuID,"hidden");
+	menuFX(getObj('menutitle'+menuID),'out');
+}
+
+function menuFX(thisobj,theevent){
+	if (theevent=='over'){
+		setBackground(thisobj,itembg);
+		setColor(thisobj,itemcolor);
+	}
+      else{
+		setBackground(thisobj,itemcolor);
+		setColor(thisobj,itembg);
+	}
+}
+
+function goPage(thisobj,menunum,itemnum){
+	menuFX(thisobj,"out");
+	hidemenu(menunum);	
+	window.location.href = eval("menu"+menunum+"url["+itemnum+"]");
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+
+.menubar { position:relative; height:1.5em; overflow:visible;}
+
+#menubar1 { z-index:7;}
+
+#menu1 { position:absolute;	left:0px; top:0px; width:150px;}
+
+#menu2 { position:absolute; left:150px; top:0px; width:150px;}
+
+#menu3 { position:absolute; left:300px; top:0px; width:150px;}
+
+#menu4 { position:absolute; left:450px; top:0px; width:150px;}
+
+#menu5 { position:absolute; left:600px; top:0px; width:150px;}
+
+#menu6 { position:absolute; left:750px; top:0px; width:150px;}
+
+
+.menutitle {
+	background:silver; color:black; font-weight:bolder;
+	border: 1px solid navy; padding:0px; position:absolute; 
+	left:0px; top:0px; width:150px; height:1.40em;
+	text-indent: .2em;
+}
+
+.dropdown {
+	background:grey; position:absolute;
+	left:0px; top:1.15em; width:150px;
+	visibility:hidden; z-index:4;
+}
+
+.menuitem {
+	position:relative; background:silver; color:black;
+	font-weight:bolder; border: 1px solid navy;
+	width:150px; text-indent: .5em;
+}
+
+-->
+</style>
+
+<script type="text/javascript">
+function random_pics() 
+{
+     var collection = [{
+        src: "gym1.jpg",
+        width: "340",
+        height: "210",
+    }, {
+        src: "gym2.jpg",
+        width: "440",
+        height: "380"
+    }, {
+        src: "gym3.jpg",
+        width: "400",
+        height: "280"
+	}, {
+        src: "image1.jpg",
+        width: "440",
+        height: "340"
+	}, {
+        src: "image2.jpg",
+        width: "320",
+        height: "180"
+	}, {
+        src: "image3.jpg",
+        width: "550",
+        height: "400"
+    }, {
+        src: "image4.jpg",
+        width: "220",
+        height: "150"
+    }];
+    
+    var image = [];
+    for (var i = 0; i < collection.length; i++) {
+        image[i] = new Image();
+        image[i].src = collection[i].src;
+        image[i].width = collection[i].width;
+        image[i].height = collection[i].height;
+    }
+     
+var randomImage = image[Math.round(Math.random() * image.length - 1)];
+ 
+var images = document.getElementsByTagName('img');
+for (var z = 0; z < images.length; z++) {
+    images[0].parentNode.removeChild(images[0]);
+}
+
+  var theNode1 = document.getElementById("id3");
+  theNode1.appendChild(randomImage);
+
+}
+function calculateBFP()
+{
+  var theNode = document.getElementById("id1");
+  if(isNaN(BodyFat()))
+  {
+   	var bfpString="";
+  }
+  else
+  {
+  	var bfpString="Your Body Fat Percentage is "+ BodyFat() + " percent.";
+  }
+  var newNode = document.createElement("H1");
+  theNode.appendChild(newNode);
+  theNode.lastChild.innerHTML = bfpString;
+}
+
+function BodyFat() {
+var weight = parseInt(document.getElementById("weight").value);
+var waist = parseInt(document.getElementById("waist").value);
+var x = weight * 1.082 + 94.42;   
+var y = waist * 4.15;
+var leanBodyMass = x - y;
+var bodyFatWeight = weight - leanBodyMass;
+var BFP = (bodyFatWeight * 100/ weight).toFixed(2); 
+if(BFP < 0 )
+{
+	BFP = 0;
+}
+if(BFP > 100 )
+{
+	BFP = 100;
+}
+    if (weight == "" || waist == "")
+    {
+        window.alert("Please Fill All Required Fields");
+
+    } 
+    if (isNaN(weight) || isNaN(waist)) 
+  	{
+    	alert("Please input numbers for weight and waist");
+  	}
+
+return BFP;
+}	
+</script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+	<br />
+<div id="menubar1" class="menubar">
+  <div id="menu1" onmouseover="dropmenu('1');" 
+                  onmouseout="hidemenu('1');">
+    <div id="menutitle1" class="menutitle">Homework 1</div>
+    <div id="dropdown1" class="dropdown">
+    <!--This div contains a hidden dropdown menu.-->
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,1);">
+             frameset</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,2);">
+             imagemap</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,3);">
+             mailto link</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,4);">
+             table</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,5);">
+             anchors</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,6);">
+             nested list</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,7);">
+             relevant websites</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,1,8);">
+             embedded video</div>
+    </div>
+  </div>
+  <div onmouseover="dropmenu('2');" onmouseout="hidemenu('2');" id="menu2">
+    <div id="menutitle2" class="menutitle">Homework 2</div>
+    <div class="dropdown" id="dropdown2">
+    <!--This div contains a hidden dropdown menu.-->
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,2,1);">
+        CSS File</div>
+    </div>
+  </div>
+  <div onmouseover="dropmenu('3');" onmouseout="hidemenu('3');" id="menu3">
+    <div id="menutitle3" class="menutitle">Homework 3</div>
+    <div id="dropdown3" class="dropdown">
+    <!--This div contains a hidden dropdown menu.-->
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,3,1);">
+             Part 1</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,3,2);">
+             Part 2</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,3,3);">
+             Part 3</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,3,4);">
+             Part 4</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,3,5);">
+             Part 5</div>
+    </div>
+  </div>
+  <div onmouseover="dropmenu('4');" onmouseout="hidemenu('4');" id="menu4">
+    <div id="menutitle4" class="menutitle">Homework 4</div>
+    <div id="dropdown4" class="dropdown">
+    <!--This div contains a hidden dropdown menu.-->
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,4,1);">
+             Part 1</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,4,2);">
+             Part 2</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,4,3);">
+             Part 3</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,4,4);">
+             Part 4</div>
+    </div>
+  </div>
+  <div onmouseover="dropmenu('5');" onmouseout="hidemenu('5');" id="menu5">
+    <div id="menutitle5" class="menutitle">Homework 5</div>
+    <div id="dropdown5" class="dropdown">
+    <!--This div contains a hidden dropdown menu.-->
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,5,1);">
+             Part 1</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,5,2);">
+             Part 2</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,5,3);">
+             Part 3A</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,5,4);">
+             Part 3B</div>
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,5,5);">
+             Part 3C</div>
+    </div>
+  </div>
+  <div onmouseover="dropmenu('6');" onmouseout="hidemenu('6');" id="menu6">
+    <div id="menutitle6" class="menutitle">Homework 6</div>
+    <div id="dropdown6" class="dropdown">
+    <!--This div contains a hidden dropdown menu.-->
+      <div class="menuitem" onmouseover="menuFX(this,'over');" 
+           onmouseout="menuFX(this,'out');" onclick="goPage(this,6,1);">
+             Drop-Down Menu</div>
+    </div>
+  </div>
+</div>
+
+
+<br />
+<div class="row">
+<div class="col-md-6">
+	<span class="auto-style17">Body Fat Percentage</span><br />
+	<span class="auto-style18">body fat percentage is the percentage of fat that the body contains.<br />
+Body Fat Formula<br />
+X :(Body weight x 1.082) + 94.42<br />
+Y :Waist measurement x 4.15<br />
+Lean Body Mass:	X - Y<br />
+Body Fat Weight: Bodyweight - Lean Body Mass<br />
+Body Fat Percentage	(Body Fat Weight x 100) / total bodyweight
+<br /><br /> Please provide the details below:</span><br /><br />
+<form id="id1">
+	<span class="auto-style16">Weight: </span><br /> <input type="text" id="weight"/> 
+	<span class="auto-style16">pounds
+</span>
+<br />
+	<span class="auto-style16">Waist measurement: </span><br /> <input type="text" id="waist" /> 
+	<span class="auto-style16">inches
+</span>
+<br />
+<br />
+<input type="button" value="Calculate body fat" onclick="calculateBFP();" />
+</form>
+
+</div>
+<div class="col-md-6">
+<span class="auto-style14">View the random collection of our gym album.</span><br />
+<button onclick="random_pics();">Image Gallery</button><br />
+<br />
+<span id="id3"></span>
+</div>
+</div>
+</div>
+</body>
+
+</html>

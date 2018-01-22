@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/reallysimpleweather/reallysimpleweather-1.1.0.min.js">
+</script>
+<script type="text/javascript">
+reallySimpleWeather.weather({
+    wunderkey: '', 
+    location: 'Albany, NY', 
+    unit: 'c', 
+    success: function(weather) {
+    html = '<h2>Current Temperature : '+weather.temp+'°'+weather.units.temp+'</h2>';
+    html += '<h2>High : '+weather.high+'°'+weather.units.temp+'</h2>';
+    html += '<h2>Low : '+weather.low+'°'+weather.units.temp+'</h2>';
+    html += '<h2>Description : '+weather.currently+'</h2>';
+    html += '<h2>Sunrise : '+weather.sunrise+'</h2>';
+	html += '<h2>Sunset : '+weather.sunset+'</h2>';
+	document.getElementById('albanyweather').innerHTML = html;
+    },
+});
+function courseIntrested()
+{
+  var theNode = document.getElementById("course");
+  var addCourse=document.getElementById("courses");
+  var l = addCourse.selectedIndex;
+  var newCourseNode=document.createTextNode(addCourse.options[l].text);
+  var newCourseItem = document.createElement("LI");
+  newCourseItem.appendChild(newCourseNode);
+  theNode.appendChild(newCourseItem);
+  removecourse();
+}
+function getCourseOptions()
+{
+var x=document.getElementById("course");
+var txt1 = "The total number of courses that you are intrested in are ";
+var i;
+l=x.childNodes.length;  
+txt1 = txt1+l;
+for (i=0;i<x.childNodes.length;i++)
+  {
+    txt1 = txt1 + "\n" + x.childNodes[i].innerHTML;
+  }
+txt1 = txt1 + "\n For more information, please click on the Class Information page."
+alert(txt1);
+}
+function removecourse()
+{
+var x=document.getElementById("courses");
+x.remove(x.selectedIndex);
+}
+</script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+<br />
+<br />
+<div class="row">
+<div class="col-md-7">
+
+<span class="auto-style7"><strong>CSC515 Gym is located at the College of Saint Rose.</strong></span>
+<img src="albany_map.gif" alt="albany map" usemap="#albanymap" height="350" width="626" />
+<map name="albanymap">
+<area shape="rect" href="address.html" coords="59,21,229,58"
+      alt="CSC515 Gym" />
+</map>
+<br /><br /><p class="auto-style15"><strong>Albany Weather</strong></p>
+<div id="albanyweather" class="auto-style14"><strong></strong></div>
+<br />
+</div>
+<div class="col-md-5">
+<form> 
+<span class="auto-style14">Select your desired courses from the drop down menu.</span><br />
+<select id="courses"> 
+<option>Physical Training</option> 
+<option>Turbo Kick</option> 
+<option>Kick Boxing</option> 
+<option>Yoga</option> 
+<option>Krav Maga</option>
+<option>Boxing</option>
+</select>
+<br />
+<input type="button" onclick="courseIntrested()" value="Select Course" />
+<br /><br />
+<ul id="course"></ul>
+<input type="button" onclick="getCourseOptions()" value="Get more information" />
+</form>
+<br /><br />
+	<div class="auto-style4">
+		<strong>Membership Plans
+	</strong></div>
+	<table class="auto-style2 tablestyle" style="width: 100%">
+		<tr>
+			<td><strong>Class</strong></td>
+			<td><strong>Monthly</strong></td>
+			<td><strong>Quarterly</strong></td>
+			<td><strong>Annually</strong></td>
+		</tr>
+		<tr>
+			<td>Physical Training</td>
+			<td>15$</td>
+			<td>40$</td>
+			<td>160$</td>
+		</tr>
+		<tr>
+			<td>Turbo Kick</td>
+			<td>10$</td>
+			<td>30$</td>
+			<td>100$</td>
+		</tr>
+		<tr>
+			<td>Kick Boxing</td>
+			<td>12$</td>
+			<td>33$</td>
+			<td>110$</td>
+		</tr>
+		<tr>
+			<td>Yoga</td>
+			<td>15$</td>
+			<td>40$</td>
+			<td>150$</td>
+		</tr>
+		<tr>
+			<td>Krav Maga</td>
+			<td>20$</td>
+			<td>50$</td>
+			<td>200$</td>
+		</tr>
+		<tr>
+			<td>Boxing</td>
+			<td>15$</td>
+			<td>35$</td>
+			<td>140$</td>
+		</tr>
+	</table>
+
+<br />
+<form action="mailto:manukr007@gmail.com?subject=Joining Query" method="post" enctype="text/plain"><br />
+	<span class="auto-style6"><strong>Please provide the details and we would get back to you within 24 hours.
+	</strong></span>
+<br />
+First name:  <br />
+<input type="text" name="first_name" />
+<br />
+Last name: <br />
+ <input type="text" name="last_name" />
+<br />
+Email:  <br />
+<input type="text" name="email" />
+<br />
+Mobile number: <br />
+<input type="text" name="mobile" />
+<br />
+<input type="submit" value="Send" />
+<input type="reset" value="Reset" />
+</form>
+
+</div>
+</div>
+</div>
+</body>
+</html>

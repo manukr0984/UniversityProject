@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>CSC515 Gym</title>
+<script type="text/javascript">
+function calculateBMR()
+{
+  var theNode = getObj("bmr");
+  var bmrString="Your Basal Metabolic Rate (BMR) is: "+ Calculate() + " ";
+  theNode.firstChild.nodeValue=bmrString;
+  theNode.style.background = "silver";
+}
+function getObj(elementID)
+{
+  return document.getElementById(elementID);
+}
+
+
+function Calculate() {
+
+    var gender = document.getElementById("gender").value;
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+    var age = document.getElementById("age").value;
+
+    if(gender=='M' || gender=='m') 
+    /*For Men: BMR = 66+(13.7xweight in kilograms)+(5xheight in centimeters )-(6.8xage in years)*/
+        {
+            var val1 = 13.7 * parseFloat(weight);
+            var val2 = 5 * parseFloat(height);
+            var val3 = 6.8 * parseFloat(age);
+            var result = 66 + val1 + val2 - val3;
+        }
+
+    else if(gender=='F' || gender=='f') 
+    /*For Women: BMR = 655+(9.6xweight in kilograms)+(1.8xheight in centimeters)-(4.7xage in years)*/
+        {
+            var val1 = 9.6 * weight;
+            var val2 = 1.8 * height;
+            var val3 = 4.7 * age;
+            var result = 655 + val1 + val2 - val3;
+        }
+    
+	var letters = /mMfF/;     
+    if (gender == "" || weight == "" || height == "" || age == "")
+    {
+        window.alert("Please Fill All Required Fields");
+
+    } 
+    if (isNaN(weight) || isNaN(height) || isNaN(age )) 
+  	{
+    alert("Please input numbers for weight, height and age");
+  	}
+  	
+  	if (gender!="m" && gender!="M" && gender!="f" && gender!="F") 
+  	{
+    alert("Provide 'm' for Male or 'f' for Female for gender");
+  	}
+
+          
+	return result.toFixed(2);
+}
+</script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="layout1.css" />
+
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-md-7">
+			<strong><span class="auto-style1">CSC515 Gym</span></strong>
+		</div>    
+		<div class="col-md-1">
+			<a href="index.htm">Home</a>
+		</div>
+
+		<div class="col-md-1">
+			<a href="join.html">Join</a>
+		</div>
+		<div class="col-md-1">
+			<a href="newsletter.html">Newsletter</a>
+		</div>
+		<div class="col-md-1">
+			<a href="career.html">Career</a>
+		</div>
+		<div class="col-md-1">
+			<a href="frameset_gym.html">Links</a>
+		</div>
+	</div>
+	<p></p>
+	<p></p>
+	<div class="row">
+	    <div class="col-md-3">
+			<a href="why.html">Why CSC515 Gym</a>
+		</div>    
+		<div class="col-md-3">
+			<a href="join.html">Membership Plans</a>
+		</div>
+		<div class="col-md-3">
+			<a href="class.html">Class Information</a>
+		</div>
+		<div class="col-md-3">
+			<a href="trainer.html">Personal Trainers</a>
+		</div>
+	</div>
+<br />
+<br />
+	<div class="center">
+	<span class="auto-style3"><strong>CSC515 Gym Strength </strong><br /></span>
+	
+	CSC515 gym have one of the best&nbsp; group exercise classes and amenities in the 
+	city of Albany. 
+	Our personal trainers are the best in the business and would be there with 
+	you at each step to help&nbsp; you achieve unmatched fitness experience. Our 
+	equipments are up-to-date with the advancing world and cover all aspects of 
+	physical training.<br />
+<br />
+<div class="row">
+	    <div class="col-md-6">
+
+	<span class="auto-style3">
+
+<strong>Our Equipments</strong></span> <br />
+<br />
+<ul>
+    <li><strong>Cardio Machines</strong>
+        <ul>
+            <li>Recline Bikes</li>
+            <li>Treadmills</li>
+        </ul>
+    </li>
+    <li><strong>Free Weights</strong>
+        <ul>
+            <li>Dumbbells</li>
+            <li>Fixed Barbells</li>
+            <li>Plate Weights</li>
+        </ul>
+    </li>
+    <li><strong>Strength</strong>        
+    	<ul>
+            <li>Benches</li>
+            <li>Plate Loaded Machines</li>
+            <li>Selectorised Machines</li>
+            <li>Dual Purpose Machines</li>
+        </ul>
+	</li>
+	<li><strong>Studio / Miscellaneous</strong>
+    	<ul>
+            <li>Boxing</li>
+            <li>Kick Boxing</li>
+            <li>Turbo Boxing</li>
+            <li>Yoga</li>
+            <li>Krav Maga</li>
+        </ul>
+	</li>
+</ul>
+</div>
+<div class="col-md-6">
+<span class="auto-style3"><strong>Basal Metabolic Rate(BMR) Calculator</strong><br /></span>
+BMR (Basal Metabolic Rate) is an estimate of how many calories one burns burn if one  were to do nothing but 
+rest for 24 hours. It represents the minimum amount of energy needed to keep your body functioning, including 
+breathing and keeping the heart beating.
+<br /><br />
+<span class="auto-style3"><strong>Please provide the details requested below to calculate your BMR</strong><br /></span>
+<form action="#">
+  <fieldset>
+    <strong>Weight (in kgs): </strong> <br /><input type="text" id="weight" /><br />
+    <strong>Height (in cms): </strong> <br /><input type="text" id="height" /><br />
+    <strong>Age: </strong> <br /><input type="text" id="age" /><br />
+    <strong>Enter your Gender ('m' for Male or 'f' for Female ) : </strong> <br /><input type="text" id="gender" /><br />
+    </fieldset>
+    <input type="button" onclick="calculateBMR()" value="Calculate BMR" /><br /><br />
+	<p><span id="bmr" class="auto-style14">Know your BMR !!</span></p>
+</form>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+
+</html>
